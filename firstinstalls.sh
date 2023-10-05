@@ -4,6 +4,9 @@ sudo apt update
 sudo apt upgrade
 sudo apt install vim
 
+# Python & pip
+sudo apt install python3-pip
+
 # NPM & Node
 sudo apt install nodejs
 sudo apt install npm
