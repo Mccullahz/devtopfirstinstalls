@@ -3,6 +3,7 @@
 sudo apt update
 sudo apt upgrade
 sudo apt install vim
+sudo apy install nvim
 
 # Python & pip
 sudo apt install python3-pip
@@ -39,5 +40,5 @@ Categories=Development;
 "
 echo "Find an icon to use for cursor and add it to your cursor directory in opt"
 
-
-
+cd /home/zyguy
+sudo snap install discord
