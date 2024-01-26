@@ -74,5 +74,7 @@ Categories=Development;
 "
 echo "Find an icon to use for cursor and add it to your cursor directory in opt"
 
+
+# Discord
 cd /home/zyguy
 sudo snap install discord
