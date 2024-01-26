@@ -2,8 +2,18 @@
 
 sudo apt update
 sudo apt upgrade
+<<<<<<< HEAD
 sudo apt install vim
 sudo apy install nvim
+=======
+sudo apt install neovim
+
+
+# Install Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+>>>>>>> c27e8188deefe777f6bef3d46aef72d36006e230
 
 # Python & pip
 sudo apt install python3-pip
