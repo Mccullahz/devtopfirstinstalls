@@ -1,66 +1,81 @@
 # Update & Upgrade
 
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 <<<<<<< HEAD
-sudo apt install vim
-sudo apy install nvim
+sudo apt install vim -y
 =======
-sudo apt install neovim
+sudo apt install neovim -y
 
 
 # Install Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb -y
 
 >>>>>>> c27e8188deefe777f6bef3d46aef72d36006e230
 
 # Python & pip
-sudo apt install python3-pip
+sudo apt install python3-pip -y 
 
 # NPM & Node
-sudo apt install nodejs
-sudo apt install npm
+sudo apt install nodejs -y
+sudo apt install npm -y
+
+# GO
+sudo snap install go --classic -y
+
+# FREETDS
+sudo apt install freetds-bin -y
+
+# Beekeeper
+# Install our GPG key
+curl -fsSL https://deb.beekeeperstudio.io/beekeeper.key | sudo gpg --dearmor --output /usr/share/keyrings/beekeeper.gpg \
+  && sudo chmod go+r /usr/share/keyrings/beekeeper.gpg \
+  && echo "deb [signed-by=/usr/share/keyrings/beekeeper.gpg] https://deb.beekeeperstudio.io stable main" \
+  | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list > /dev/null
+
+# Update apt and install
+sudo apt update && sudo apt install beekeeper-studio -y
 
 
+sudo snap install beekeeper-studio
 
 
 # Docker & Docker Desktop
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 # Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
+sudo apt-get update -y
+sudo apt-get install ca-certificates curl gnupg -y
+sudo install -m 0755 -d /etc/apt/keyrings -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg -y
 
 # Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
+sudo apt-get update -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 
 
 
 # VSCode
-sudo apt-get install wget gpg
+sudo apt-get install wget gpg -y
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
-sudo apt install apt-transport-https
-sudo apt update
-sudo apt install code
+sudo apt install apt-transport-https -y
+sudo apt update -y
+sudo apt install code -y
 
 # Cursor
 
 wget https://www.cursor.so/cursor-0.12.0.Appimage
 chmod +x cursor-0.8.5.AppImage
-sudo apt-get install fuse
+sudo apt-get install fuse -y
 chmod +x cursor-0.8.5.AppImage
 sudo mkdir /opt/cursor/
 sudo mv cursor-0.8.5.AppImage /opt/cursor/cursor.appimage
@@ -77,4 +92,4 @@ echo "Find an icon to use for cursor and add it to your cursor directory in opt"
 
 # Discord
 cd /home/zyguy
-sudo snap install discord
+sudo snap install discord -y
