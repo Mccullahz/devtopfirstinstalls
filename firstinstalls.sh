@@ -2,9 +2,12 @@
 
 sudo apt update -y
 sudo apt upgrade -y
-<<<<<<< HEAD
+
+
+
+# Vim and nvim installs, want to add my lua conf to here as well.
 sudo apt install vim -y
-=======
+
 sudo apt install neovim -y
 
 
@@ -27,7 +30,7 @@ sudo snap install go --classic -y
 # FREETDS
 sudo apt install freetds-bin -y
 
-# Beekeeper
+# Beekeeper SQL client
 # Install our GPG key
 curl -fsSL https://deb.beekeeperstudio.io/beekeeper.key | sudo gpg --dearmor --output /usr/share/keyrings/beekeeper.gpg \
   && sudo chmod go+r /usr/share/keyrings/beekeeper.gpg \
@@ -71,7 +74,9 @@ sudo apt install apt-transport-https -y
 sudo apt update -y
 sudo apt install code -y
 
-# Cursor
+
+
+# Cursor, this actually doesnt work but its a good reminder of what i need to knock out lol
 
 wget https://www.cursor.so/cursor-0.12.0.Appimage
 chmod +x cursor-0.8.5.AppImage
@@ -91,5 +96,4 @@ echo "Find an icon to use for cursor and add it to your cursor directory in opt"
 
 
 # Discord
-cd /home/zyguy
 sudo snap install discord -y
