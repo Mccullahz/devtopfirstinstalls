@@ -15,8 +15,6 @@ sudo apt install neovim -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb -y
 
->>>>>>> c27e8188deefe777f6bef3d46aef72d36006e230
-
 # Python & pip
 sudo apt install python3-pip -y 
 
