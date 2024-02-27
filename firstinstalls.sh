@@ -8,7 +8,8 @@ sudo apt upgrade -y
 # Vim and nvim installs, want to add my lua conf to here as well.
 sudo apt install vim -y
 sudo apt install neovim -y
-## nvim dependencies
+## nvim dependencies && CMAKE
+sudo apt install cmake
 sudo apt install gettext -y
 git clone https://github.com/neovim/neovim
 cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
