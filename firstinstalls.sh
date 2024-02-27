@@ -16,6 +16,14 @@ cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 sudo make CMAKE_BUILD_TYPE=Release
 
+## LazyVim Setup
+rm -r ~/.config/nvim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+
+
+
 # Install Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb -y
