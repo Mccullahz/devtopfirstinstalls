@@ -7,8 +7,12 @@ sudo apt upgrade -y
 
 # Vim and nvim installs, want to add my lua conf to here as well.
 sudo apt install vim -y
-
 sudo apt install neovim -y
+## nvim dependencies
+sudo apt install gettext -y
+git clone https://github.com/neovim/neovim
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
 
 
 # Install Chrome
