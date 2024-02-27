@@ -14,7 +14,7 @@ sudo apt install gettext -y
 git clone https://github.com/neovim/neovim
 cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
-
+sudo make CMAKE_BUILD_TYPE=Release
 
 # Install Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
